@@ -2,11 +2,12 @@ package com.example.entity;
 
 import lombok.*;
 import org.hibernate.Hibernate;
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * <pre>
@@ -27,6 +28,17 @@ public class FormtableMain47 {
 
     @Id
     private Integer id;
+
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER,mappedBy = "formtableMain47")
+/*    @JoinColumn(
+            name = "mainid"
+            , referencedColumnName = "id"
+            , foreignKey = @ForeignKey(ConstraintMode.NO_CONSTRAINT)
+    )*/
+    @NotFound(action = NotFoundAction.IGNORE)
+    private Set<FormtableMain47Dt1> formtableMain47Dt1;
+
 
     //唯一
     private Integer requestId;

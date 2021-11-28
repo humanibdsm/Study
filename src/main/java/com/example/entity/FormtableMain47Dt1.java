@@ -20,7 +20,7 @@ import java.util.Objects;
 //流程明细表
 @Getter
 @Setter
-@ToString
+@ToString(exclude={"formtableMain47"})
 @RequiredArgsConstructor
 @Entity
 @Table(name = "formtable_main_47_dt1")

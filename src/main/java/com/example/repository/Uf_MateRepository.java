@@ -1,4 +1,4 @@
-package com.example.restory;
+package com.example.repository;
 
 import com.example.entity.Uf_Mate;
 import org.springframework.data.jpa.repository.JpaRepository;
