@@ -27,4 +27,17 @@ public class JpaApplicationTests {
 
     }
 
+    @Test
+    public void update(){
+        String userPassword = userService.getUserPassword(2,"44");
+        System.out.println(userPassword);
+    }
+
+    @Test
+    public void delete(){
+        userService.deletePassword(2);
+
+
+    }
+
 }
